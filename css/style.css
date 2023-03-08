@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@use "material-components-web/material-components-web";
+
+body {
+    font-family: 'Raleway', sans-serif !important;
+    background-image: url("images/fondo.jpg");
+    background-color: #f2f2f2;
+}
+
+p {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+
+/* Botones */
+.mdc-button--unelevated:not(:disabled) {
+    width: 495px;
+    height: 40px;
+    background: #4A4458;
+    border-radius: 100px;
+}
+
+.mdc-line-ripple::before, .mdc-line-ripple::after {
+    position: absolute;
+    bottom: 50%;
+    width: 94%;
+    border-bottom-style: solid;
+    content: "";
+}
+
+.row {
+  margin: 10% 0%;
+}
+
+
+/* @media (min-width: 576px) { ... }
+
+@media (min-width: 768px) { ... }
+
+@media (min-width: 992px) { ... }
+
+@media (min-width: 1200px) { ... } */
