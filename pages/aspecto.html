@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Proyecto Básico HTML con CSS y jQuery</title>
+      
+        <!-- Agregamos las hojas de estilo -->
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet"
+          href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      
+        <!-- Agregamos los scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      
+      
+        <!-- Agregamos nuestro CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+      
+      </head>
+      <style>
+        .md-form {
+          margin-bottom: 1rem;
+        }
+      
+        .md-form p {
+          font-size: 16px;
+          margin-bottom: 0.5rem;
+        }
+      
+        .md-form .form-check {
+          margin-right: 1rem;
+        }
+      
+        .md-form .form-check-label {
+          font-size: 14px;
+          color: #9e9e9e;
+          margin-left: 0.5rem;
+        }
+      
+        .md-form .form-check-input:checked ~ .form-check-label {
+            color: #6750A4
+        }
+        .iphone-container {
+            background-color: #eee;
+            border-radius: 40px;
+            box-shadow: 0px 0px 20px #999;
+            height: 500px;
+            margin: 10px auto;
+            overflow: hidden;
+            position: relative;
+            width: 300px;
+        }
+
+        .iphone-header {
+            background-color: #333;
+            height: 60px;
+            position: relative;
+        }
+
+        .iphone-camera {
+            background-color: #000;
+            border-radius: 50%;
+            height: 12px;
+            left: 50%;
+            margin-left: -6px;
+            position: absolute;
+            top: 18px;
+            width: 12px;
+            z-index: 2;
+        }
+
+        .iphone-speaker {
+            background-color: #000;
+            border-radius: 50%;
+            height: 6px;
+            left: 50%;
+            margin-left: -20px;
+            position: absolute;
+            top: 30px;
+            width: 40px;
+            z-index: 2;
+        }
+
+        .iphone-sensor {
+            background-color: #999;
+            border-radius: 50%;
+            height: 6px;
+            left: 50%;
+            margin-left: -55px;
+            position: absolute;
+            top: 30px;
+            width: 10px;
+            z-index: 2;
+        }
+
+        .iphone-screen {
+                background-color: #fff;
+                height: 520px;
+                padding: 20px;
+            }
+
+        .checkbox-container .material-icons{
+            font-size: 5rem !important;
+        }
+        .checkbox-container {
+            margin-top: 20px;
+        }
+      </style>
+
+      <body>
+        <div class="container">
+            <div class="row">
+                <h1>Personalizar aspecto</h1>
+            </div>
+            <div class="row">
+                <div class="col-md">
+
+                </div>
+                <div class="col-md">
+                    <div class="iphone-container">
+                        <div class="iphone-header">
+                          <div class="iphone-camera"></div>
+                          <div class="iphone-speaker"></div>
+                          <div class="iphone-sensor"></div>
+                        </div>
+                        <div class="iphone-screen">
+                          <!-- Your HTML elements go here -->
+                          <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <p class="font-weight-bold">Hora</p>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="time" id="am" value="am" checked>
+                                      <label class="form-check-label" for="am">AM</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="time" id="pm" value="pm">
+                                      <label class="form-check-label" for="pm">PM</label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <p class="font-weight-bold">Días</p>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="dias" id="one" value="am" checked>
+                                      <label class="form-check-label" for="one">Uno a uno</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="dias" id="interv" value="pm">
+                                      <label class="form-check-label" for="interv">Intervalos</label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <p class="font-weight-bold">Sonido</p>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="sonido" id="playlist" value="am" checked>
+                                      <label class="form-check-label" for="playlist">Playlist</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="sonido" id="individual" value="pm">
+                                      <label class="form-check-label" for="individual">Individual</label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="md-form">
+                                    <p class="font-weight-bold">Patrón</p>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="patron" id="sacudir" value="am" checked>
+                                      <label class="form-check-label" for="sacudir">Sacudir</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="patron" id="pantalla" value="pm">
+                                      <label class="form-check-label" for="pantalla">Pantalla</label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="col-md-6 checkbox-container">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="material-icons checkbox-icon">lock</span>
+                                </label>
+                            </div>
+                            <div class="col-md-6 checkbox-container">
+                                <label>
+                                    <input type="checkbox">
+                                    <span class="material-icons checkbox-icon">notifications</span>
+                                </label>
+                            </div>
+                        </div>
+                          
+                        </div>
+                        <div class="iphone-footer">
+                          <div class="iphone-home"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+                <a href="dashboard.html">
+                    <button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded">
+                        <span class="mdc-button__ripple"></span>
+                        <i class="material-icons mdc-button__icon">arrow_back</i>
+                        <span class="mdc-button__label">Volver</span>
+                    </button>
+                </a>
+            </div>
+          </div>
+          <!-- Required Material Web JavaScript library -->
+        <script
+            src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        </script>
+        <!-- Instantiate single textfield component rendered in the document -->
+        <script>
+        mdc.textField.MDCTextField.attachTo(document.querySelector < HTMLElement > ('.mdc-text-field'));
+        </script>
+      </body>
+</html>
