@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Proyecto Básico HTML con CSS y jQuery</title>
+      
+        <!-- Agregamos las hojas de estilo -->
+        <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet"
+          href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      
+        <!-- Agregamos los scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script
+          src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      
+      
+        <!-- Agregamos nuestro CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+      
+      </head>
+
+      <body>
+        <div class="container">
+            <div class="row">
+                <h1>Detalle de la alarma Lunes a Viernes</h1>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="mdc-text-field">
+                                <input style="width: 40%; text-align: center;" class="mdc-text-field__input display-time" id="text-field-hero-input" disabled="true" value="20:00"> 
+                                <label for="text-field-hero-input" class="mdc-floating-label"></label>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-shape-one-helper-text">Hora</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mdc-text-field">
+                                <input style="width: 40%; text-align: center;" class="mdc-text-field__input display-time" id="text-field-hero-input" disabled="true" value="20:00"> 
+                                <label for="text-field-hero-input" class="mdc-floating-label"></label>
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-shape-one-helper-text">Hora</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="mdc-text-field text-field mdc-ripple-upgraded">
+                                <input type="text" disabled="true" value="MIA_PLAYLIST" id="text-field-filled" class="mdc-text-field__input" aria-describedby="text-field-filled-helper-text">
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-filled-helper-text">Puedes cambiar el sonido desde la app</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mdc-text-field text-field mdc-ripple-upgraded">
+                                <input type="text" disabled="true" value="ASIGNADO" id="text-field-filled" class="mdc-text-field__input" aria-describedby="text-field-filled-helper-text">
+                            </div>
+                            <div class="mdc-text-field-helper-line">
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-filled-helper-text">Puedes cambiar el patrón desde la app</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+          </div>
+          <!-- Required Material Web JavaScript library -->
+        <script
+            src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js">
+        </script>
+        <!-- Instantiate single textfield component rendered in the document -->
+        <script>
+        mdc.textField.MDCTextField.attachTo(document.querySelector < HTMLElement > ('.mdc-text-field'));
+        </script>
+        <script src="script.js"></script>
+      </body>
+</html>
