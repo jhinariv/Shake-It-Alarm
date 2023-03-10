@@ -247,6 +247,19 @@ li.mdc-list-item.mdc-ripple-upgraded .col-md-3 {
     padding-right: 0;
 }
 
+.search .mdc-text-field {
+    background-color: #1C1B1F;
+    border-radius: 30px;
+}
+
+.search .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #CAC4D0;
+}
+
+.mdc-text-field.mdc-text-field--filled.mdc-ripple-upgraded {
+
+}
+
 
 
 
