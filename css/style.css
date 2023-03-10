@@ -48,6 +48,7 @@ p {
 }
 img.img-home {
   width: 100%;
+  display:block;
 }
 
 /* Botones */

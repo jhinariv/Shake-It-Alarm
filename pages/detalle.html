@@ -27,6 +27,90 @@
         <link rel="stylesheet" type="text/css" href="../css/style.css">
       
       </head>
+      <style>
+        #week-days {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: none;
+          background-color: transparent;
+          font-size: 24px;
+          margin-bottom: 0;
+          color: #757575;
+        }
+      
+        #week-days input[type="checkbox"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+      
+        #week-days label {
+          position: relative;
+          display: inline-block;
+          padding: 12px 24px;
+          margin: 0;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 24px;
+          color: #757575;
+          transition: all 0.2s ease-out;
+          cursor: pointer;
+          z-index: 1;
+        }
+      
+        #week-days label:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      
+        #week-days input[type="checkbox"]:checked + label {
+          color: #4285f4;
+        }
+      
+        .md-form {
+          position: relative;
+        }
+
+        input {
+            color: #49454F !important; 
+        }
+      
+        .md-form label {
+          position: absolute;
+          top: 1rem;
+          left: 0;
+          transition: all 0.2s ease-out;
+          color: #49454F !important; 
+        }
+      
+        .md-form label.active {
+          font-size: 14px;
+          top: 0;
+          transform: translateY(-50%);
+        }
+      
+        #week-days input[type="checkbox"]:checked + label:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: rgba(224, 224, 224, 0.5);
+          z-index: -1;
+        }
+
+        img.img-detalle {
+            width: 100%;
+        }
+
+        .text-muted{
+            color: #49454F !important; 
+        }
+      </style>
 
       <body>
         <div class="container">
@@ -34,49 +118,73 @@
                 <h1>Detalle de la alarma Lunes a Viernes</h1>
             </div>
             <div class="row">
-                <div class="col-sm">
+                <div class="col-md">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="mdc-text-field">
-                                <input style="width: 40%; text-align: center;" class="mdc-text-field__input display-time" id="text-field-hero-input" disabled="true" value="20:00"> 
-                                <label for="text-field-hero-input" class="mdc-floating-label"></label>
-                            </div>
-                            <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-shape-one-helper-text">Hora</p>
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <input type="time" id="start-time" class="form-control" disabled value="17:00">
+                                <label for="start-time">Hora</label>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="mdc-text-field">
-                                <input style="width: 40%; text-align: center;" class="mdc-text-field__input display-time" id="text-field-hero-input" disabled="true" value="20:00"> 
-                                <label for="text-field-hero-input" class="mdc-floating-label"></label>
-                            </div>
-                            <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-shape-one-helper-text">Hora</p>
-                            </div>
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <label for="week-days">Días</label>
+                                <div id="week-days">
+                                <input type="checkbox" id="sunday" value="sunday" checked disabled>
+                                  <label for="sunday">S</label>
+                                  <input type="checkbox" id="monday" value="monday" disabled>
+                                  <label for="monday">M</label>
+                                  <input type="checkbox" id="tuesday" value="tuesday" disabled>
+                                  <label for="tuesday">T</label>
+                                  <input type="checkbox" id="wednesday" value="wednesday" disabled>
+                                  <label for="wednesday">W</label>
+                                  <input type="checkbox" id="thursday" value="thursday" disabled>
+                                  <label for="thursday">T</label>
+                                  <input type="checkbox" id="friday" value="friday" disabled>
+                                  <label for="friday">F</label>
+                                  <input type="checkbox" id="saturday" value="saturday" checked disabled>
+                                  <label for="saturday">S</label>
+                                </div>
+                              </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-md">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="mdc-text-field text-field mdc-ripple-upgraded">
-                                <input type="text" disabled="true" value="MIA_PLAYLIST" id="text-field-filled" class="mdc-text-field__input" aria-describedby="text-field-filled-helper-text">
-                            </div>
-                            <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-filled-helper-text">Puedes cambiar el sonido desde la app</p>
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <input type="text" id="playlist" class="form-control" value="MIA_PLAYLIST" disabled>
+                                <label for="playlist">Lista de reproducción</label>
+                                <small class="form-text text-muted">Puedes cambiar el sonido desde la app</small>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="mdc-text-field text-field mdc-ripple-upgraded">
-                                <input type="text" disabled="true" value="ASIGNADO" id="text-field-filled" class="mdc-text-field__input" aria-describedby="text-field-filled-helper-text">
+                        <div class="col-md-12">
+                            <br>
+                            <div class="md-form">
+                                <input type="text" id="patron" class="form-control" value="ASIGNADO" disabled>
+                                <label for="patron">Patrón</label>
+                                <small class="form-text text-muted">Puedes cambiar el patrón desde la app</small>
                             </div>
-                            <div class="mdc-text-field-helper-line">
-                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" id="text-field-filled-helper-text">Puedes cambiar el patrón desde la app</p>
-                            </div>
+                        </div>
+                        
+                        <div class="col-md-12">
+                            <br>
+                            <img src="../css/images/detalleimg.png" alt="detalle" class="img-detalle">
                         </div>
                     </div>
                 </div>
 
+          </div>
+          <div class="row">
+            <div class="col-md-2">
+                <a href="dashboard.html">
+                    <button class="demo-button mdc-button mdc-button--unelevated mdc-ripple-upgraded">
+                        <span class="mdc-button__ripple"></span>
+                        <i class="material-icons mdc-button__icon">arrow_back</i>
+                        <span class="mdc-button__label">Volver</span>
+                    </button>
+                </a>
+            </div>
           </div>
           <!-- Required Material Web JavaScript library -->
         <script
@@ -86,6 +194,5 @@
         <script>
         mdc.textField.MDCTextField.attachTo(document.querySelector < HTMLElement > ('.mdc-text-field'));
         </script>
-        <script src="script.js"></script>
       </body>
 </html>
