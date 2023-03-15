@@ -23,7 +23,7 @@
 <body>
   <div class="container">
     <div class="row justify-content-between">
-      <div class="col-md-8 column-one">
+      <div class="col-md-8">
 
         <div class="row header">
           <div class="col-md-6">
@@ -34,7 +34,7 @@
               <div class="mdc-text-field mdc-text-field--filled"
                 data-mdc-auto-init="MDCTextField">
                 <span class="mdc-text-field__ripple"></span>
-                <input class="mdc-text-field__input" type="text"
+                <input class="mdc-text-field__input" name="search" type="text"
                   aria-labelledby="label">
                 <a href="resultado_busqueda.html">
                   <span class="material-symbols-rounded">
@@ -50,62 +50,88 @@
 
         <div class="row list-items">
 
-            <ul class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
-              <li class="mdc-list-item mdc-ripple-upgraded">
-                <div class="col-md-9">
+          <ul
+            class="mdc-list demo-list mdc-list--two-line mdc-list--avatar-list">
+            <li class="mdc-list-item mdc-ripple-upgraded">
+              <div class="col-md-9">
                 <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text">Lunes a Viernes</span>
+                  <span class="mdc-list-item__primary-text">Lunes a
+                    Viernes</span>
                   <span class="mdc-list-item__secondary-text">06:00 am</span>
-                  </span>
+                </span>
 
-                </div>
-                <div class="col-md-3">
-                  <a href="detalle.html"
-            class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-            <span class="mdc-button__ripple"></span>Ver detalle</a>
+              </div>
+              <div class="col-md-3">
+                <a href="detalle.html"
+                  class="mdc-button mdc-button--unelevated mdc-ripple-upgraded detail">
+                  <span class="mdc-button__ripple"></span>Ver detalle</a>
 
-            </div>
-                  </li>
+                <a href="editar.html"
+                  class="mdc-button mdc-button--unelevated mdc-ripple-upgraded edit">
+                  <span class="mdc-button__ripple"></span>Editar</a>
+
+              </div>
+            </li>
 
 
-                <li class="mdc-list-item mdc-ripple-upgraded">
-                  <div class="col-md-9">
+            <li class="mdc-list-item mdc-ripple-upgraded">
+              <div class="col-md-9">
                 <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text">Sabado 4 de Marzo, 2023</span>
+                  <span class="mdc-list-item__primary-text">Sabado 4 de Marzo,
+                    2023</span>
                   <span class="mdc-list-item__secondary-text">07:30 pm</span>
-                  </span>
-                  </div>
-                <div class="col-md-3">
-                  <a href="detalle.html"
-            class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-            <span class="mdc-button__ripple"></span>Ver detalle</a>
+                </span>
+              </div>
+              <div class="col-md-3">
+                <a href="detalle.html"
+                  class="mdc-button mdc-button--unelevated mdc-ripple-upgraded detail">
+                  <span class="mdc-button__ripple"></span>Ver detalle</a>
 
-            </div>
+                <a href="editar.html"
+                  class="mdc-button mdc-button--unelevated mdc-ripple-upgraded edit">
+                  <span class="mdc-button__ripple"></span>Editar</a>
 
-                  </li>
+              </div>
 
-            </ul>
+            </li>
+
+          </ul>
 
         </div>
 
-
+        <div class="row botom">
+          <div class="col-sm-6 checkbox-container left">
+            <a href="crear.html">
+              <span class="material-symbols-rounded icon">
+                lock
+              </span>
+            </a>
+          </div>
+          <div class="col-sm-5 checkbox-container right">
+            <a href="crear.html">
+              <span class="material-symbols-rounded icon">
+                add
+              </span>
+            </a>
+          </div>
+        </div>
 
 
 
       </div>
 
-      <div class="col-md-4 column-two">
+      <div class="col-md-4">
         <div class="mdc-admin">
           <div class="mdc-admin__container">
             <div class="mdc-dialog__surface">
 
               <div class="mdc-dialog__header">
-                  <span class="material-symbols-rounded">
-                mobile_friendly
+                <span class="material-symbols-rounded">
+                  mobile_friendly
                 </span>
 
-              <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
-              <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+                <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+                <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
      -->Administración<!--
    --></h2>
               </div>
@@ -116,21 +142,20 @@
                     <!-- Todo: cambiar a url correcta -->
                     <a href="aspecto.html">
                       <div class="circular--landscape first">
-                      <span class="material-symbols-rounded">person</span>
+                        <span class="material-symbols-rounded">person</span>
                       </div>
-                      <span
-                      class="test-list-item__label">Personalizar aspecto</span>
-                      </a>
+                      <span class="test-list-item__label">Personalizar
+                        aspecto</span>
+                    </a>
                   </li>
                   <li class="mdc-list-item">
 
-                      <a href="../index.html">
+                    <a href="../index.html">
                       <div class="circular--landscape second">
-                      <span class="material-symbols-rounded">person</span>
+                        <span class="material-symbols-rounded">person</span>
                       </div>
-                      <span
-                      class="test-list-item__label">Cerrar sesión</span>
-                      </a>
+                      <span class="test-list-item__label">Cerrar sesión</span>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -147,13 +172,13 @@
   </div>
 
   <!-- Required Material Web JavaScript library -->
-  <script
+  <script type="text/javascript"
     src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <!-- Instantiate single textfield component rendered in the document -->
   <script type="text/javascript">
     window.mdc.autoInit();
   </script>
-
+  <script type="text/javascript" src="../script.js"></script>
 
 
 </body>
