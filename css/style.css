@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
+  background-size: cover;
 }
 
 .material-symbols-rounded {
@@ -239,7 +240,6 @@ li.mdc-list-item.mdc-ripple-upgraded .col-md-3 {
 /* Buscador */
 .col-md-6.search {
   text-align: right;
-  padding-right: 0;
 }
 
 .search .mdc-text-field {
@@ -283,19 +283,15 @@ li.mdc-list-item.mdc-ripple-upgraded .col-md-3 {
 #week-days label {
   position: relative;
   display: inline-block;
-  padding: 12px 24px;
+  padding: 0 15px;
   margin: 0;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 500;
   line-height: 24px;
   color: #757575;
   transition: all 0.2s ease-out;
   cursor: pointer;
   z-index: 1;
-}
-
-#week-days label:hover {
-  background-color: rgba(0, 0, 0, 0.04);
 }
 
 #week-days input[type="checkbox"]:checked+label {
@@ -325,8 +321,8 @@ li.mdc-list-item.mdc-ripple-upgraded .col-md-3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: rgba(208, 188, 255, 0.5);
   z-index: -1;
@@ -448,50 +444,65 @@ li.mdc-list-item.mdc-ripple-upgraded .col-md-3 {
     padding-left: 0;
 }
 
-/* @media (min-width: 576px) {
-  a.detail {
-    display: none;
-  }
-  img.img-home {
-    display: none;
-  }
-  a.edit {
-    display: flex;
-  }
+
+.hidden-web {
+  display: none;
 }
 
-@media (min-width: 768px) {
-  a.detail {
-    display: flex;
-  }
-  img.img-home-mobile {
+
+@media screen and (max-width: 576px) {
+  .hidden-mobile {
     display: none;
   }
-  a.edit {
-    display: none;
+
+  .hidden-web {
+    display: inline-flex;
   }
+
+  .row.header, .row.list-items {
+    margin-right: 0;
+  }
+
+  .container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .row.botom {
+    margin-top: 45%;
+  }
+
+
 }
 
-@media (min-width: 992px) {
-  a.detail {
-    display: flex;
-  }
-  img.img-home-mobile {
+@media screen and (max-width: 768px) {
+  .hidden-mobile {
     display: none;
   }
-  a.edit {
-    display: none;
-  }
-}
 
-@media (min-width: 1200px) {
-  a.detail {
-    display: flex;
+  .hidden-web {
+    display: inline-flex;
   }
-  img.img-home-mobile {
-    display: none;
+
+  .row.header, .row.list-items {
+    margin-right: 0;
   }
-  a.edit {
-    display: none;
+
+  .container {
+    padding-right: 40px;
+    padding-left: 40px;
   }
-} */
+
+  .content {
+    width: 90%;
+  }
+
+  .row.botom {
+    margin-top: 45%;
+  }
+
+}

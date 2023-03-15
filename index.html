@@ -17,7 +17,18 @@
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <!-- Agregamos nuestro CSS -->
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">´
+
+
+  <style>
+
+
+    .second {
+      margin-top: 20%;
+    }
+
+  </style>
+
 </head>
 
 <body>
@@ -26,55 +37,73 @@
       <div class="col-md-6">
         <div class="content">
           <h1>Shaket It Alarm</h1>
-          <!-- <img src="css/images/home-mobile.jpg" alt="home" class="img-home-mobile"> -->
-          <a href="pages/dashboard.html"
-            class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-            <span class="mdc-button__ripple"></span>Ingreso con Google</a>
 
-          <div class="text-field-container text-one">
-            <div class="mdc-text-field mdc-text-field--filled"
-              data-mdc-auto-init="MDCTextField">
-              <span class="mdc-text-field__ripple"></span>
-              <input class="mdc-text-field__input" type="text"
-                aria-labelledby="label">
-              <span class="material-symbols-rounded">
-                cancel
-              </span>
-              <label class="mdc-floating-label">Número de teléfono</label>
-              <!-- <span class="mdc-line-ripple"></span> -->
-            </div>
-            <div class="mdc-text-field-helper-line">
-              <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
-                id="text-field-filled-trailing-helper-text">Ingrese su número de
-                teléfono</p>
-            </div>
+          <div class="row">
+
+            <div class="hidden-web"><img src="css/images/home-mobile.jpg"
+                alt="home" class="img-home-mobile"></div>
+            <a href="pages/dashboard.html"
+              class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
+              <span class="mdc-button__ripple"></span>Ingreso con Google</a>
+
+
           </div>
-          <div class="text-field-container text-two">
-            <div class="mdc-text-field mdc-text-field--filled"
-              data-mdc-auto-init="MDCTextField">
-              <span class="mdc-text-field__ripple"></span>
-              <input class="mdc-text-field__input" type="text"
-                aria-labelledby="label">
-              <span class="material-symbols-rounded">
-                cancel
-              </span>
-              <label class="mdc-floating-label">Código</label>
-              <!-- <span class="mdc-line-ripple"></span> -->
+
+          <div class="second">
+
+            <div class="text-field-container text-one">
+              <div class="mdc-text-field mdc-text-field--filled"
+                data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" type="text"
+                  aria-labelledby="label">
+                <span class="material-symbols-rounded">
+                  cancel
+                </span>
+                <label class="mdc-floating-label">Número de teléfono</label>
+                <!-- <span class="mdc-line-ripple"></span> -->
+              </div>
+              <div class="mdc-text-field-helper-line">
+                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                  id="text-field-filled-trailing-helper-text">Ingrese su número
+                  de
+                  teléfono</p>
+              </div>
             </div>
-            <div class="mdc-text-field-helper-line">
-              <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
-                id="text-field-filled-trailing-helper-text">Este código lo puede
-                generar desde la aplicación en su telefono</p>
+            <div class="text-field-container text-two hidden-mobile">
+              <div class="mdc-text-field mdc-text-field--filled"
+                data-mdc-auto-init="MDCTextField">
+                <span class="mdc-text-field__ripple"></span>
+                <input class="mdc-text-field__input" type="text"
+                  aria-labelledby="label">
+                <span class="material-symbols-rounded">
+                  cancel
+                </span>
+                <label class="mdc-floating-label">Código</label>
+                <!-- <span class="mdc-line-ripple"></span> -->
+              </div>
+              <div class="mdc-text-field-helper-line">
+                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                  id="text-field-filled-trailing-helper-text">Este código lo
+                  puede
+                  generar desde la aplicación en su telefono</p>
+              </div>
             </div>
+            <a href="pages/dashboard.html"
+              class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
+              <span class="mdc-button__ripple"></span>Iniciar Sesión</a>
+
+
           </div>
-          <a href="pages/dashboard.html"
-            class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-            <span class="mdc-button__ripple"></span>Iniciar Sesión</a>
+
+
         </div>
       </div>
 
       <div class="col-md-6">
-        <img src="css/images/home.jpg" alt="home" class="img-home">
+        <div class="hidden-mobile">
+          <img src="css/images/home.jpg" alt="home" class="img-home">
+        </div>
       </div>
     </div>
 

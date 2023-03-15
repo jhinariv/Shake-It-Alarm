@@ -34,12 +34,12 @@
         </div>
 
         <div class="row">
+
+          <label for="start-time">Hora</label>
+
           <input type="time" id="start-time" class="form-control" disabled
             value="17:00">
-          <label for="start-time">Hora</label>
-        </div>
 
-        <div class="row">
           <label for="week-days">Días</label>
           <div id="week-days">
             <input type="checkbox" id="sunday" value="sunday" checked disabled>
@@ -54,7 +54,8 @@
             <label for="thursday">T</label>
             <input type="checkbox" id="friday" value="friday" disabled>
             <label for="friday">F</label>
-            <input type="checkbox" id="saturday" value="saturday" checked disabled>
+            <input type="checkbox" id="saturday" value="saturday" checked
+              disabled>
             <label for="saturday">S</label>
           </div>
         </div>
@@ -64,20 +65,35 @@
 
       <div class="col-md-6">
         <div class="row">
-          <input type="text" id="patron" class="form-control" value="ASIGNADO"
-            disabled>
-          <label for="patron">Patrón</label>
-          <small class="form-text text-muted">Puedes cambiar el patrón desde
-            la app</small>
-        </div>
-        <div class="row">
-          <input type="text" id="playlist" class="form-control"
-            value="MIA_PLAYLIST" disabled>
-          <label for="playlist">Lista de reproducción</label>
-          <small class="form-text text-muted">Puedes cambiar el sonido desde
-            la app</small>
-        </div>
-        <div class="row">
+
+          <div class="text-field-container text-one">
+            <div class="mdc-text-field mdc-text-field--filled"
+              data-mdc-auto-init="MDCTextField">
+              <span class="mdc-text-field__ripple"></span>
+              <input class="mdc-text-field__input" type="text"
+                aria-labelledby="label" value="MIA_PLAYLIST" disabled>
+              <label class="mdc-floating-label">Lista de reproducción</label>
+            </div>
+            <div class="mdc-text-field-helper-line">
+              <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                id="text-field-filled-trailing-helper-text">Puedes cambiar el sonido desde la app</p>
+            </div>
+          </div>
+
+          <div class="text-field-container text-one">
+            <div class="mdc-text-field mdc-text-field--filled"
+              data-mdc-auto-init="MDCTextField">
+              <span class="mdc-text-field__ripple"></span>
+              <input class="mdc-text-field__input" type="text"
+                aria-labelledby="label" value="ASIGNADO" disabled>
+              <label class="mdc-floating-label">Patrón</label>
+            </div>
+            <div class="mdc-text-field-helper-line">
+              <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg"
+                id="text-field-filled-trailing-helper-text">Puedes cambiar el patrón desde la app</p>
+            </div>
+          </div>
+
           <img src="../css/images/detalleimg.png" alt="detalle"
             class="img-detalle">
         </div>
@@ -85,12 +101,13 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-12">
         <a href="dashboard.html"
-            class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
-            <span class="mdc-button__ripple"></span><span class="material-symbols-rounded">
-arrow_back
-</span>Volver</a>
+          class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
+          <span class="mdc-button__ripple"></span><span
+            class="material-symbols-rounded">
+            arrow_back
+          </span>Volver</a>
       </div>
     </div>
 

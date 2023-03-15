@@ -24,7 +24,7 @@
 
   <style>
 
-    .col-md-2 {
+    .col-md-12 {
         margin: 15px 0px;
     }
 
@@ -35,6 +35,10 @@
     .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
       border-color: #D0BCFF;
       background-color: #D0BCFF;
+    }
+
+    .text-field-container.text-one {
+        width: 100%;
     }
 
     svg.mdc-checkbox__checkmark {
@@ -53,7 +57,7 @@
         <h1>Crear Alarma</h1>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div class="row header">
 
         </div>
@@ -83,18 +87,32 @@
 
         <div class="row">
 
-
-          <div class="time-picker">
-            <input class="timepicker-ui-input" value="12:00 AM" />
+          <div class="col-sm-6">
+            <div class="mdc-text-field mdc-text-field--filled"
+              data-mdc-auto-init="MDCTextField">
+              <span class="mdc-text-field__ripple"></span>
+              <input class="mdc-text-field__input" type="text"
+                aria-labelledby="label" value="10">
+              <label class="mdc-floating-label">Hora</label>
+            </div>
           </div>
 
+          <div class="col-sm-6">
+            <div class="mdc-text-field mdc-text-field--filled"
+              data-mdc-auto-init="MDCTextField">
+              <span class="mdc-text-field__ripple"></span>
+              <input class="mdc-text-field__input" type="text"
+                aria-labelledby="label" value="00">
+              <label class="mdc-floating-label">Minutos</label>
+            </div>
+          </div>
         </div>
 
 
-        <div class="row">
+        <div class="row" style="margin: 5% 0;">
           <label for="week-days">Días</label>
           <div id="week-days">
-            <input type="checkbox" id="sunday" value="sunday">
+            <input type="checkbox" id="sunday" value="sunday" checked>
             <label for="sunday">S</label>
             <input type="checkbox" id="monday" value="monday">
             <label for="monday">M</label>
@@ -106,19 +124,19 @@
             <label for="thursday">T</label>
             <input type="checkbox" id="friday" value="friday">
             <label for="friday">F</label>
-            <input type="checkbox" id="saturday" value="saturday">
+            <input type="checkbox" id="saturday" value="saturday" checked>
             <label for="saturday">S</label>
           </div>
         </div>
 
 
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-12">
             <a href="select_sound.html"
               class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
               </span>Seleccionar Sonido</a>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-12">
             <a href="select_patron.html"
               class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
               <span class="mdc-button__ripple"></span>Seleccionar Patrón</a>
@@ -160,7 +178,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-6">
         <a href="dashboard.html"
           class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
           <span class="mdc-button__ripple"></span><span
@@ -168,7 +186,7 @@
             arrow_back
           </span>Volver</a>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-6">
         <a href="dashboard.html"
           class="mdc-button mdc-button--unelevated mdc-ripple-upgraded save">
           <span class="mdc-button__ripple"></span>Guardar</a>
